@@ -1,0 +1,2052 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20181020134845
+Username: NTMS_PC4\Administrator
+RunAs User: NTMS_PC4\Administrator
+Machine: NTMS_PC4 (Microsoft Windows NT 6.2.9200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe
+Process ID: 2432
+**********************
+Transcript started, output file is C:\bharat\20102018.txt
+
+PS C:\> get-help
+
+TOPIC
+    Windows PowerShell Help System
+
+SHORT DESCRIPTION
+    Displays help about Windows PowerShell cmdlets and concepts.
+
+LONG DESCRIPTION
+    Windows PowerShell Help describes Windows PowerShell cmdlets,
+    functions, scripts, and modules, and explains concepts, including
+    the elements of the Windows PowerShell language.
+
+    Windows PowerShell does not include help files, but you can read the
+    help topics online, or use the Update-Help cmdlet to download help files
+    to your computer and then use the Get-Help cmdlet to display the help
+    topics at the command line.
+
+    You can also use the Update-Help cmdlet to download updated help files
+    as they are released so that your local help content is never obsolete.
+
+    Without help files, Get-Help displays auto-generated help for cmdlets,
+    functions, and scripts.
+
+
+  ONLINE HELP
+    You can find help for Windows PowerShell online in the TechNet Library
+    beginning at http://go.microsoft.com/fwlink/?LinkID=108518.
+
+    To open online help for any cmdlet or function, type:
+
+        Get-Help <cmdlet-name> -Online
+
+  UPDATE-HELP
+    To download and install help files on your computer:
+
+       1. Start Windows PowerShell with the "Run as administrator" option.
+       2. Type:
+
+          Update-Help
+
+    After the help files are installed, you can use the Get-Help cmdlet to
+    display the help topics. You can also use the Update-Help cmdlet to
+    download updated help files so that your local help files are always
+    up-to-date.
+
+    For more information about the Update-Help cmdlet, type:
+
+       Get-Help Update-Help -Online
+
+    or go to: http://go.microsoft.com/fwlink/?LinkID=210614
+
+
+  GET-HELP
+    The Get-Help cmdlet displays help at the command line from content in
+    help files on your computer. Without help files, Get-Help displays basic
+    help about cmdlets and functions. You can also use Get-Help to display
+    online help for cmdlets and functions.
+
+    To get help for a cmdlet, type:
+
+        Get-Help <cmdlet-name>
+
+    To get online help, type:
+
+        Get-Help <cmdlet-name> -Online
+
+    The titles of conceptual topics begin with "About_".
+    To get help for a concept or language element, type:
+
+        Get-Help About_<topic-name>
+
+    To search for a word or phrase in all help files, type:
+
+        Get-Help <search-term>
+
+    For more information about the Get-Help cmdlet, type:
+
+        Get-Help Get-Help -Online
+
+    or go to: http://go.microsoft.com/fwlink/?LinkID=113316
+
+
+  EXAMPLES:
+      Save-Help              : Download help files from the Internet and saves
+                               them on a file share.
+      Update-Help            : Downloads and installs help files from the
+                               Internet or a file share.
+      Get-Help Get-Process   : Displays help about the Get-Process cmdlet.
+      Get-Help Get-Process -Online
+                             : Opens online help for the Get-Process cmdlet.
+      Help Get-Process       : Displays help about Get-Process one page at a time.
+      Get-Process -?         : Displays help about the Get-Process cmdlet.
+      Get-Help About_Modules : Displays help about Windows PowerShell modules.
+      Get-Help remoting      : Searches the help topics for the word "remoting."
+
+  SEE ALSO:
+      about_Updatable_Help
+      Get-Help
+      Save-Help
+      Update-Help
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\> hostname
+NTMS_PC4
+
+PS C:\> ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::1408:2b5:6f26:bd3e%12
+   IPv4 Address. . . . . . . . . . . : 192.168.1.38
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.1.1
+
+Ethernet adapter VMware Network Adapter VMnet3:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::b4b8:d18c:cf5:39ca%34
+   Autoconfiguration IPv4 Address. . : 169.254.57.202
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . :
+
+Tunnel adapter isatap.{34B4A691-3807-4F0E-9415-1F5610ADC241}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Tunnel adapter isatap.{B2F6F9BB-572A-4F93-BE1B-E4E1280D01CA}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+PS C:\> Write-EventLog -LogName Application -Source Chrome -EventId 4001 -Message "This is test computer"
+
+PS C:\> Write-EventLog -LogName Application -Source Chrome -EventId 4002 -Message "This is test computer"
+
+PS C:\> $Bharat
+
+PS C:\> $Bharat = Get-Service
+
+PS C:\> TerminatingError(Resolve-Path): "Cannot process argument because the value of argument "path" is not valid. Change the value of the "path" argument and run the operation again."
+
+PS C:\> $Bharat
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  AdobeARMservice    Adobe Acrobat Update Service
+Stopped  AeLookupSvc        Application Experience
+Stopped  ALG                Application Layer Gateway Service
+Running  AnyDesk            AnyDesk Service
+Running  AppHostSvc         Application Host Helper Service
+Stopped  AppIDSvc           Application Identity
+Stopped  Appinfo            Application Information
+Stopped  AppMgmt            Application Management
+Stopped  AppReadiness       App Readiness
+Stopped  AppXSvc            AppX Deployment Service (AppXSVC)
+Stopped  aspnet_state       ASP.NET State Service
+Running  AudioEndpointBu... Windows Audio Endpoint Builder
+Running  Audiosrv           Windows Audio
+Stopped  AxInstSV           ActiveX Installer (AxInstSV)
+Running  AzureADConnectA... Microsoft Azure AD Connect Agent Up...
+Running  AzureADConnectA... Microsoft Azure AD Connect Authenti...
+Stopped  BDESVC             BitLocker Drive Encryption Service
+Running  BFE                Base Filtering Engine
+Running  BITS               Background Intelligent Transfer Ser...
+Running  BrokerInfrastru... Background Tasks Infrastructure Ser...
+Running  Browser            Computer Browser
+Stopped  BthHFSrv           Bluetooth Handsfree Service
+Stopped  bthserv            Bluetooth Support Service
+Stopped  CertPropSvc        Certificate Propagation
+Stopped  COMSysApp          COM+ System Application
+Stopped  cphs               Intel(R) Content Protection HECI Se...
+Running  CryptSvc           Cryptographic Services
+Stopped  CscService         Offline Files
+Running  DcomLaunch         DCOM Server Process Launcher
+Stopped  defragsvc          Optimise drives
+Running  DeviceAssociati... Device Association Service
+Stopped  DeviceInstall      Device Install Service
+Running  Dhcp               DHCP Client
+Running  DiagTrack          Diagnostics Tracking Service
+Running  Dnscache           DNS Client
+Stopped  dot3svc            Wired AutoConfig
+Running  DPS                Diagnostic Policy Service
+Stopped  DsmSvc             Device Setup Manager
+Stopped  Eaphost            Extensible Authentication Protocol
+Stopped  EFS                Encrypting File System (EFS)
+Running  EventLog           Windows Event Log
+Running  EventSystem        COM+ Event System
+Stopped  Fax                Fax
+Stopped  fdPHost            Function Discovery Provider Host
+Stopped  FDResPub           Function Discovery Resource Publica...
+Stopped  fhsvc              File History Service
+Running  FontCache          Windows Font Cache Service
+Running  FontCache3.0.0.0   Windows Presentation Foundation Fon...
+Stopped  gpsvc              Group Policy Client
+Stopped  gupdate            Google Update Service (gupdate)
+Stopped  gupdatem           Google Update Service (gupdatem)
+Running  hidserv            Human Interface Device Service
+Stopped  hkmsvc             Health Key and Certificate Management
+Stopped  HomeGroupListener  HomeGroup Listener
+Stopped  HomeGroupProvider  HomeGroup Provider
+Stopped  IDriverT           InstallDriver Table Manager
+Stopped  IEEtwCollectorS... Internet Explorer ETW Collector Ser...
+Running  igfxCUIService1... Intel(R) HD Graphics Control Panel ...
+Running  IKEEXT             IKE and AuthIP IPsec Keying Modules
+Running  iphlpsvc           IP Helper
+Running  KeyIso             CNG Key Isolation
+Stopped  KtmRm              KtmRm for Distributed Transaction C...
+Running  LanmanServer       Server
+Running  LanmanWorkstation  Workstation
+Stopped  lfsvc              Windows Location Framework Service
+Stopped  lltdsvc            Link-Layer Topology Discovery Mapper
+Running  lmhosts            TCP/IP NetBIOS Helper
+Running  LSM                Local Session Manager
+Stopped  MMCSS              Multimedia Class Scheduler
+Running  MpsSvc             Windows Firewall
+Stopped  MSDTC              Distributed Transaction Coordinator
+Running  MSiSCSI            Microsoft iSCSI Initiator Service
+Stopped  msiserver          Windows Installer
+Stopped  MsKeyboardFilter   Microsoft Keyboard Filter
+Running  msoidsvc           Microsoft Online Services Sign-in A...
+Stopped  napagent           Network Access Protection Agent
+Stopped  NcaSvc             Network Connectivity Assistant
+Running  NcbService         Network Connection Broker
+Stopped  NcdAutoSetup       Network Connected Devices Auto-Setup
+Stopped  Netlogon           Netlogon
+Running  Netman             Network Connections
+Running  netprofm           Network List Service
+Stopped  NetTcpPortSharing  NetTcpPortSharing
+Running  NlaSvc             Network Location Awareness
+Running  nsi                Network Store Interface Service
+Stopped  odserv             Microsoft Office Diagnostics Service
+Stopped  OracleJobSchedu... OracleJobSchedulerXE
+Stopped  OracleMTSRecove... OracleMTSRecoveryService
+Running  OracleServiceXE    OracleServiceXE
+Stopped  OracleXEClrAgent   OracleXEClrAgent
+Stopped  OracleXETNSList... OracleXETNSListener
+Stopped  ose                Office  Source Engine
+Stopped  p2pimsvc           Peer Networking Identity Manager
+Stopped  p2psvc             Peer Networking Grouping
+Running  PcaSvc             Program Compatibility Assistant Ser...
+Stopped  PeerDistSvc        BranchCache
+Stopped  PerfHost           Performance Counter DLL Host
+Stopped  pla                Performance Logs & Alerts
+Running  PlugPlay           Plug and Play
+Stopped  PNRPAutoReg        PNRP Machine Name Publication Service
+Stopped  PNRPsvc            Peer Name Resolution Protocol
+Running  PolicyAgent        IPsec Policy Agent
+Running  Power              Power
+Stopped  PrintNotify        Printer Extensions and Notifications
+Running  ProfSvc            User Profile Service
+Stopped  QWAVE              Quality Windows Audio Video Experience
+Stopped  RasAuto            Remote Access Auto Connection Manager
+Stopped  RasMan             Remote Access Connection Manager
+Stopped  RemoteAccess       Routing and Remote Access
+Stopped  RemoteRegistry     Remote Registry
+Running  RemoteServerWin    RemoteServerWin
+Running  RpcEptMapper       RPC Endpoint Mapper
+Stopped  RpcLocator         Remote Procedure Call (RPC) Locator
+Running  RpcSs              Remote Procedure Call (RPC)
+Running  SamSs              Security Accounts Manager
+Stopped  SCardSvr           Smart Card
+Stopped  ScDeviceEnum       Smart Card Device Enumeration Service
+Running  Schedule           Task Scheduler
+Stopped  SCPolicySvc        Smart Card Removal Policy
+Running  seclogon           Secondary Log-on
+Running  SENS               System Event Notification Service
+Stopped  SensrSvc           Sensor Monitoring Service
+Stopped  SessionEnv         Remote Desktop Configuration
+Stopped  SharedAccess       Internet Connection Sharing (ICS)
+Running  ShellHWDetection   Shell Hardware Detection
+Stopped  smphost            Microsoft Storage Spaces SMP
+Stopped  SNMPTRAP           SNMP Trap
+Running  Spooler            Print Spooler
+Stopped  sppsvc             Software Protection
+Running  SSDPSRV            SSDP Discovery
+Stopped  SstpSvc            Secure Socket Tunneling Protocol Se...
+Running  stisvc             Windows Image Acquisition (WIA)
+Stopped  StorSvc            Storage Service
+Stopped  svsvc              Spot Verifier
+Stopped  swprv              Microsoft Software Shadow Copy Prov...
+Running  SysMain            Superfetch
+Running  SystemEventsBroker System Events Broker
+Stopped  TabletInputService Touch Keyboard and Handwriting Pane...
+Stopped  TapiSrv            Telephony
+Running  TeamViewer         TeamViewer 13
+Stopped  TermService        Remote Desktop Services
+Running  Themes             Themes
+Stopped  THREADORDER        Thread Ordering Server
+Running  TimeBroker         Time Broker
+Stopped  TlntSvr            Telnet
+Running  TrkWks             Distributed Link Tracking Client
+Stopped  TrustedInstaller   Windows Modules Installer
+Stopped  UI0Detect          Interactive Services Detection
+Running  UltraViewService   UltraViewer Service
+Stopped  UmRdpService       Remote Desktop Services UserMode Po...
+Stopped  upnphost           UPnP Device Host
+Stopped  VaultSvc           Credential Manager
+Stopped  vds                Virtual Disk
+Running  VMAuthdService     VMware Authorization Service
+Stopped  vmicguestinterface Hyper-V Guest Service Interface
+Stopped  vmicheartbeat      Hyper-V Heartbeat Service
+Stopped  vmickvpexchange    Hyper-V Data Exchange Service
+Stopped  vmicrdv            Hyper-V Remote Desktop Virtualizati...
+Stopped  vmicshutdown       Hyper-V Guest Shutdown Service
+Stopped  vmictimesync       Hyper-V Time Synchronization Service
+Stopped  vmicvss            Hyper-V Volume Shadow Copy Requestor
+Stopped  VMnetDHCP          VMware DHCP Service
+Running  VMUSBArbService    VMware USB Arbitration Service
+Stopped  VMware NAT Service VMware NAT Service
+Running  VMwareHostd        VMware Workstation Server
+Stopped  VSS                Volume Shadow Copy
+Stopped  W32Time            Windows Time
+Stopped  w3logsvc           W3C Logging Service
+Running  W3SVC              World Wide Web Publishing Service
+Running  WAS                Windows Process Activation Service
+Stopped  wbengine           Block Level Backup Engine Service
+Stopped  WbioSrvc           Windows Biometric Service
+Running  Wcmsvc             Windows Connection Manager
+Running  wcncsvc            Windows Connect Now - Config Registrar
+Stopped  WcsPlugInService   Windows Colour System
+Running  WdiServiceHost     Diagnostic Service Host
+Stopped  WdiSystemHost      Diagnostic System Host
+Running  WdNisSvc           Windows Defender Network Inspection...
+Stopped  WebClient          WebClient
+Stopped  Wecsvc             Windows Event Collector
+Stopped  WEPHOSTSVC         Windows Encryption Provider Host Se...
+Stopped  wercplsupport      Problem Reports and Solutions Contr...
+Stopped  WerSvc             Windows Error Reporting Service
+Stopped  WiaRpc             Still Image Acquisition Events
+Running  WinDefend          Windows Defender Service
+
+PS C:\> TerminatingError(): "The pipeline has been stopped."
+
+PS C:\> Var:
+Var: : The term 'Var:' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Var:
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (Var::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+PS C:\> Get-PSProvider
+
+Name                 Capabilities                                        Drives
+----                 ------------                                        ------
+Alias                ShouldProcess                                       {Alias}
+Environment          ShouldProcess                                       {Env}
+FileSystem           Filter, ShouldProcess, Credentials                  {C, D, E}
+Function             ShouldProcess                                       {Function}
+Registry             ShouldProcess, Transactions                         {HKLM, HKCU}
+Variable             ShouldProcess                                       {Variable}
+Certificate          ShouldProcess                                       {Cert}
+WSMan                Credentials                                         {WSMan}
+
+
+
+PS C:\> Variable:
+Variable: : The term 'Variable:' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Variable:
++ ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Variable::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+PS C:\> $Bharat.GetType
+
+OverloadDefinitions
+-------------------
+type GetType()
+
+
+
+
+PS C:\> $Test=1
+
+PS C:\> $test
+1
+
+PS C:\> $test.GetType
+
+OverloadDefinitions
+-------------------
+type GetType()
+
+
+
+
+PS C:\> $test.GetType()
+
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+True     True     Int32                                    System.ValueType
+
+
+
+PS C:\> $test1="2"
+
+PS C:\> $test1.GetType()
+
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+True     True     String                                   System.Object
+
+
+
+PS C:\> $Test+2
+3
+
+PS C:\> $Test1+2
+22
+
+PS C:\> TerminatingError(Resolve-Path): "The specified wildcard character pattern is not valid: \[int.*"
+
+PS C:\> [int]::MinValue
+-2147483648
+
+PS C:\> [int]::MaxValue
+2147483647
+
+PS C:\> [int32]::MaxValue
+2147483647
+
+PS C:\> [int32]::MinValue
+-2147483648
+
+PS C:\> [int64]::MinValue
+-9223372036854775808
+
+PS C:\> [int64]::MaxValue
+9223372036854775807
+
+PS C:\> [uint32]::MinValue
+0
+
+PS C:\> [uint32]::MaxValue
+4294967295
+
+PS C:\> [uint64]::MaxValue
+18446744073709551615
+
+PS C:\> [uint64]::MinValue
+0
+
+PS C:\> $muvar="This is my object"
+
+PS C:\> $muvar
+This is my object
+
+PS C:\> $muvar.GetType()
+
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+True     True     String                                   System.Object
+
+
+
+PS C:\> $muvar | Get-Member
+
+
+   TypeName: System.String
+
+Name             MemberType            Definition
+----             ----------            ----------
+Clone            Method                System.Object Clone(), System.Object ICloneable.Clone()
+CompareTo        Method                int CompareTo(System.Object value), int CompareTo(string strB), int IComparable.Co...
+Contains         Method                bool Contains(string value)
+CopyTo           Method                void CopyTo(int sourceIndex, char[] destination, int destinationIndex, int count)
+EndsWith         Method                bool EndsWith(string value), bool EndsWith(string value, System.StringComparison c...
+Equals           Method                bool Equals(System.Object obj), bool Equals(string value), bool Equals(string valu...
+GetEnumerator    Method                System.CharEnumerator GetEnumerator(), System.Collections.IEnumerator IEnumerable....
+GetHashCode      Method                int GetHashCode()
+GetType          Method                type GetType()
+GetTypeCode      Method                System.TypeCode GetTypeCode(), System.TypeCode IConvertible.GetTypeCode()
+IndexOf          Method                int IndexOf(char value), int IndexOf(char value, int startIndex), int IndexOf(char...
+IndexOfAny       Method                int IndexOfAny(char[] anyOf), int IndexOfAny(char[] anyOf, int startIndex), int In...
+Insert           Method                string Insert(int startIndex, string value)
+IsNormalized     Method                bool IsNormalized(), bool IsNormalized(System.Text.NormalizationForm normalization...
+LastIndexOf      Method                int LastIndexOf(char value), int LastIndexOf(char value, int startIndex), int Last...
+LastIndexOfAny   Method                int LastIndexOfAny(char[] anyOf), int LastIndexOfAny(char[] anyOf, int startIndex)...
+Normalize        Method                string Normalize(), string Normalize(System.Text.NormalizationForm normalizationForm)
+PadLeft          Method                string PadLeft(int totalWidth), string PadLeft(int totalWidth, char paddingChar)
+PadRight         Method                string PadRight(int totalWidth), string PadRight(int totalWidth, char paddingChar)
+Remove           Method                string Remove(int startIndex, int count), string Remove(int startIndex)
+Replace          Method                string Replace(char oldChar, char newChar), string Replace(string oldValue, string...
+Split            Method                string[] Split(Params char[] separator), string[] Split(char[] separator, int coun...
+StartsWith       Method                bool StartsWith(string value), bool StartsWith(string value, System.StringComparis...
+Substring        Method                string Substring(int startIndex), string Substring(int startIndex, int length)
+ToBoolean        Method                bool IConvertible.ToBoolean(System.IFormatProvider provider)
+ToByte           Method                byte IConvertible.ToByte(System.IFormatProvider provider)
+ToChar           Method                char IConvertible.ToChar(System.IFormatProvider provider)
+ToCharArray      Method                char[] ToCharArray(), char[] ToCharArray(int startIndex, int length)
+ToDateTime       Method                datetime IConvertible.ToDateTime(System.IFormatProvider provider)
+ToDecimal        Method                decimal IConvertible.ToDecimal(System.IFormatProvider provider)
+ToDouble         Method                double IConvertible.ToDouble(System.IFormatProvider provider)
+ToInt16          Method                int16 IConvertible.ToInt16(System.IFormatProvider provider)
+ToInt32          Method                int IConvertible.ToInt32(System.IFormatProvider provider)
+ToInt64          Method                long IConvertible.ToInt64(System.IFormatProvider provider)
+ToLower          Method                string ToLower(), string ToLower(cultureinfo culture)
+ToLowerInvariant Method                string ToLowerInvariant()
+ToSByte          Method                sbyte IConvertible.ToSByte(System.IFormatProvider provider)
+ToSingle         Method                float IConvertible.ToSingle(System.IFormatProvider provider)
+ToString         Method                string ToString(), string ToString(System.IFormatProvider provider), string IConve...
+ToType           Method                System.Object IConvertible.ToType(type conversionType, System.IFormatProvider prov...
+ToUInt16         Method                uint16 IConvertible.ToUInt16(System.IFormatProvider provider)
+ToUInt32         Method                uint32 IConvertible.ToUInt32(System.IFormatProvider provider)
+ToUInt64         Method                uint64 IConvertible.ToUInt64(System.IFormatProvider provider)
+ToUpper          Method                string ToUpper(), string ToUpper(cultureinfo culture)
+ToUpperInvariant Method                string ToUpperInvariant()
+Trim             Method                string Trim(Params char[] trimChars), string Trim()
+TrimEnd          Method                string TrimEnd(Params char[] trimChars)
+TrimStart        Method                string TrimStart(Params char[] trimChars)
+Chars            ParameterizedProperty char Chars(int index) {get;}
+Length           Property              int Length {get;}
+
+
+
+PS C:\> $muvar="This is my object"
+
+PS C:\> $muvar.ToUpper()
+THIS IS MY OBJECT
+
+PS C:\> $muvar.Length
+17
+
+PS C:\> Get-Service | Get-Member
+
+
+   TypeName: System.ServiceProcess.ServiceController
+
+Name                      MemberType    Definition
+----                      ----------    ----------
+Name                      AliasProperty Name = ServiceName
+RequiredServices          AliasProperty RequiredServices = ServicesDependedOn
+Disposed                  Event         System.EventHandler Disposed(System.Object, System.EventArgs)
+Close                     Method        void Close()
+Continue                  Method        void Continue()
+CreateObjRef              Method        System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
+Dispose                   Method        void Dispose(), void IDisposable.Dispose()
+Equals                    Method        bool Equals(System.Object obj)
+ExecuteCommand            Method        void ExecuteCommand(int command)
+GetHashCode               Method        int GetHashCode()
+GetLifetimeService        Method        System.Object GetLifetimeService()
+GetType                   Method        type GetType()
+InitializeLifetimeService Method        System.Object InitializeLifetimeService()
+Pause                     Method        void Pause()
+Refresh                   Method        void Refresh()
+Start                     Method        void Start(), void Start(string[] args)
+Stop                      Method        void Stop()
+WaitForStatus             Method        void WaitForStatus(System.ServiceProcess.ServiceControllerStatus desiredStatus), ...
+CanPauseAndContinue       Property      bool CanPauseAndContinue {get;}
+CanShutdown               Property      bool CanShutdown {get;}
+CanStop                   Property      bool CanStop {get;}
+Container                 Property      System.ComponentModel.IContainer Container {get;}
+DependentServices         Property      System.ServiceProcess.ServiceController[] DependentServices {get;}
+DisplayName               Property      string DisplayName {get;set;}
+MachineName               Property      string MachineName {get;set;}
+ServiceHandle             Property      System.Runtime.InteropServices.SafeHandle ServiceHandle {get;}
+ServiceName               Property      string ServiceName {get;set;}
+ServicesDependedOn        Property      System.ServiceProcess.ServiceController[] ServicesDependedOn {get;}
+ServiceType               Property      System.ServiceProcess.ServiceType ServiceType {get;}
+Site                      Property      System.ComponentModel.ISite Site {get;set;}
+StartType                 Property      System.ServiceProcess.ServiceStartMode StartType {get;}
+Status                    Property      System.ServiceProcess.ServiceControllerStatus Status {get;}
+ToString                  ScriptMethod  System.Object ToString();
+
+
+
+PS C:\> Get-Process | Get-Member
+
+
+   TypeName: System.Diagnostics.Process
+
+Name                       MemberType     Definition
+----                       ----------     ----------
+Handles                    AliasProperty  Handles = Handlecount
+Name                       AliasProperty  Name = ProcessName
+NPM                        AliasProperty  NPM = NonpagedSystemMemorySize
+PM                         AliasProperty  PM = PagedMemorySize
+VM                         AliasProperty  VM = VirtualMemorySize
+WS                         AliasProperty  WS = WorkingSet
+Disposed                   Event          System.EventHandler Disposed(System.Object, System.EventArgs)
+ErrorDataReceived          Event          System.Diagnostics.DataReceivedEventHandler ErrorDataReceived(System.Object, Sy...
+Exited                     Event          System.EventHandler Exited(System.Object, System.EventArgs)
+OutputDataReceived         Event          System.Diagnostics.DataReceivedEventHandler OutputDataReceived(System.Object, S...
+BeginErrorReadLine         Method         void BeginErrorReadLine()
+BeginOutputReadLine        Method         void BeginOutputReadLine()
+CancelErrorRead            Method         void CancelErrorRead()
+CancelOutputRead           Method         void CancelOutputRead()
+Close                      Method         void Close()
+CloseMainWindow            Method         bool CloseMainWindow()
+CreateObjRef               Method         System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
+Dispose                    Method         void Dispose(), void IDisposable.Dispose()
+Equals                     Method         bool Equals(System.Object obj)
+GetHashCode                Method         int GetHashCode()
+GetLifetimeService         Method         System.Object GetLifetimeService()
+GetType                    Method         type GetType()
+InitializeLifetimeService  Method         System.Object InitializeLifetimeService()
+Kill                       Method         void Kill()
+Refresh                    Method         void Refresh()
+Start                      Method         bool Start()
+ToString                   Method         string ToString()
+WaitForExit                Method         bool WaitForExit(int milliseconds), void WaitForExit()
+WaitForInputIdle           Method         bool WaitForInputIdle(int milliseconds), bool WaitForInputIdle()
+__NounName                 NoteProperty   System.String __NounName=Process
+BasePriority               Property       int BasePriority {get;}
+Container                  Property       System.ComponentModel.IContainer Container {get;}
+EnableRaisingEvents        Property       bool EnableRaisingEvents {get;set;}
+ExitCode                   Property       int ExitCode {get;}
+ExitTime                   Property       datetime ExitTime {get;}
+Handle                     Property       System.IntPtr Handle {get;}
+HandleCount                Property       int HandleCount {get;}
+HasExited                  Property       bool HasExited {get;}
+Id                         Property       int Id {get;}
+MachineName                Property       string MachineName {get;}
+MainModule                 Property       System.Diagnostics.ProcessModule MainModule {get;}
+MainWindowHandle           Property       System.IntPtr MainWindowHandle {get;}
+MainWindowTitle            Property       string MainWindowTitle {get;}
+MaxWorkingSet              Property       System.IntPtr MaxWorkingSet {get;set;}
+MinWorkingSet              Property       System.IntPtr MinWorkingSet {get;set;}
+Modules                    Property       System.Diagnostics.ProcessModuleCollection Modules {get;}
+NonpagedSystemMemorySize   Property       int NonpagedSystemMemorySize {get;}
+NonpagedSystemMemorySize64 Property       long NonpagedSystemMemorySize64 {get;}
+PagedMemorySize            Property       int PagedMemorySize {get;}
+PagedMemorySize64          Property       long PagedMemorySize64 {get;}
+PagedSystemMemorySize      Property       int PagedSystemMemorySize {get;}
+PagedSystemMemorySize64    Property       long PagedSystemMemorySize64 {get;}
+PeakPagedMemorySize        Property       int PeakPagedMemorySize {get;}
+PeakPagedMemorySize64      Property       long PeakPagedMemorySize64 {get;}
+PeakVirtualMemorySize      Property       int PeakVirtualMemorySize {get;}
+PeakVirtualMemorySize64    Property       long PeakVirtualMemorySize64 {get;}
+PeakWorkingSet             Property       int PeakWorkingSet {get;}
+PeakWorkingSet64           Property       long PeakWorkingSet64 {get;}
+PriorityBoostEnabled       Property       bool PriorityBoostEnabled {get;set;}
+PriorityClass              Property       System.Diagnostics.ProcessPriorityClass PriorityClass {get;set;}
+PrivateMemorySize          Property       int PrivateMemorySize {get;}
+PrivateMemorySize64        Property       long PrivateMemorySize64 {get;}
+PrivilegedProcessorTime    Property       timespan PrivilegedProcessorTime {get;}
+ProcessName                Property       string ProcessName {get;}
+ProcessorAffinity          Property       System.IntPtr ProcessorAffinity {get;set;}
+Responding                 Property       bool Responding {get;}
+SafeHandle                 Property       Microsoft.Win32.SafeHandles.SafeProcessHandle SafeHandle {get;}
+SessionId                  Property       int SessionId {get;}
+Site                       Property       System.ComponentModel.ISite Site {get;set;}
+StandardError              Property       System.IO.StreamReader StandardError {get;}
+StandardInput              Property       System.IO.StreamWriter StandardInput {get;}
+StandardOutput             Property       System.IO.StreamReader StandardOutput {get;}
+StartInfo                  Property       System.Diagnostics.ProcessStartInfo StartInfo {get;set;}
+StartTime                  Property       datetime StartTime {get;}
+SynchronizingObject        Property       System.ComponentModel.ISynchronizeInvoke SynchronizingObject {get;set;}
+Threads                    Property       System.Diagnostics.ProcessThreadCollection Threads {get;}
+TotalProcessorTime         Property       timespan TotalProcessorTime {get;}
+UserProcessorTime          Property       timespan UserProcessorTime {get;}
+VirtualMemorySize          Property       int VirtualMemorySize {get;}
+VirtualMemorySize64        Property       long VirtualMemorySize64 {get;}
+WorkingSet                 Property       int WorkingSet {get;}
+WorkingSet64               Property       long WorkingSet64 {get;}
+PSConfiguration            PropertySet    PSConfiguration {Name, Id, PriorityClass, FileVersion}
+PSResources                PropertySet    PSResources {Name, Id, Handlecount, WorkingSet, NonPagedMemorySize, PagedMemory...
+Company                    ScriptProperty System.Object Company {get=$this.Mainmodule.FileVersionInfo.CompanyName;}
+CPU                        ScriptProperty System.Object CPU {get=$this.TotalProcessorTime.TotalSeconds;}
+Description                ScriptProperty System.Object Description {get=$this.Mainmodule.FileVersionInfo.FileDescription;}
+FileVersion                ScriptProperty System.Object FileVersion {get=$this.Mainmodule.FileVersionInfo.FileVersion;}
+Path                       ScriptProperty System.Object Path {get=$this.Mainmodule.FileName;}
+Product                    ScriptProperty System.Object Product {get=$this.Mainmodule.FileVersionInfo.ProductName;}
+ProductVersion             ScriptProperty System.Object ProductVersion {get=$this.Mainmodule.FileVersionInfo.ProductVersi...
+
+
+
+PS C:\> [System]::
+Missing property name after reference operator.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingPropertyName
+
+
+PS C:\> [System.Diagnostics.Process]::
+Missing property name after reference operator.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingPropertyName
+
+
+PS C:\> [System.Diagnostics.Process]
+
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+True     False    Process                                  System.ComponentModel.Component
+
+
+
+PS C:\> Get-ChildItem | Get-Member
+
+
+   TypeName: System.IO.DirectoryInfo
+
+Name                      MemberType     Definition
+----                      ----------     ----------
+Mode                      CodeProperty   System.String Mode{get=Mode;}
+Create                    Method         void Create(), void Create(System.Security.AccessControl.DirectorySecurity direc...
+CreateObjRef              Method         System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
+CreateSubdirectory        Method         System.IO.DirectoryInfo CreateSubdirectory(string path), System.IO.DirectoryInfo...
+Delete                    Method         void Delete(), void Delete(bool recursive)
+EnumerateDirectories      Method         System.Collections.Generic.IEnumerable[System.IO.DirectoryInfo] EnumerateDirecto...
+EnumerateFiles            Method         System.Collections.Generic.IEnumerable[System.IO.FileInfo] EnumerateFiles(), Sys...
+EnumerateFileSystemInfos  Method         System.Collections.Generic.IEnumerable[System.IO.FileSystemInfo] EnumerateFileSy...
+Equals                    Method         bool Equals(System.Object obj)
+GetAccessControl          Method         System.Security.AccessControl.DirectorySecurity GetAccessControl(), System.Secur...
+GetDirectories            Method         System.IO.DirectoryInfo[] GetDirectories(), System.IO.DirectoryInfo[] GetDirecto...
+GetFiles                  Method         System.IO.FileInfo[] GetFiles(string searchPattern), System.IO.FileInfo[] GetFil...
+GetFileSystemInfos        Method         System.IO.FileSystemInfo[] GetFileSystemInfos(string searchPattern), System.IO.F...
+GetHashCode               Method         int GetHashCode()
+GetLifetimeService        Method         System.Object GetLifetimeService()
+GetObjectData             Method         void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.R...
+GetType                   Method         type GetType()
+InitializeLifetimeService Method         System.Object InitializeLifetimeService()
+MoveTo                    Method         void MoveTo(string destDirName)
+Refresh                   Method         void Refresh()
+SetAccessControl          Method         void SetAccessControl(System.Security.AccessControl.DirectorySecurity directoryS...
+ToString                  Method         string ToString()
+PSChildName               NoteProperty   System.String PSChildName=bharat
+PSDrive                   NoteProperty   System.Management.Automation.PSDriveInfo PSDrive=C
+PSIsContainer             NoteProperty   System.Boolean PSIsContainer=True
+PSParentPath              NoteProperty   System.String PSParentPath=Microsoft.PowerShell.Core\FileSystem::C:\
+PSPath                    NoteProperty   System.String PSPath=Microsoft.PowerShell.Core\FileSystem::C:\bharat
+PSProvider                NoteProperty   System.Management.Automation.ProviderInfo PSProvider=Microsoft.PowerShell.Core\F...
+Attributes                Property       System.IO.FileAttributes Attributes {get;set;}
+CreationTime              Property       datetime CreationTime {get;set;}
+CreationTimeUtc           Property       datetime CreationTimeUtc {get;set;}
+Exists                    Property       bool Exists {get;}
+Extension                 Property       string Extension {get;}
+FullName                  Property       string FullName {get;}
+LastAccessTime            Property       datetime LastAccessTime {get;set;}
+LastAccessTimeUtc         Property       datetime LastAccessTimeUtc {get;set;}
+LastWriteTime             Property       datetime LastWriteTime {get;set;}
+LastWriteTimeUtc          Property       datetime LastWriteTimeUtc {get;set;}
+Name                      Property       string Name {get;}
+Parent                    Property       System.IO.DirectoryInfo Parent {get;}
+Root                      Property       System.IO.DirectoryInfo Root {get;}
+BaseName                  ScriptProperty System.Object BaseName {get=$this.Name;}
+
+
+   TypeName: System.IO.FileInfo
+
+Name                      MemberType     Definition
+----                      ----------     ----------
+Mode                      CodeProperty   System.String Mode{get=Mode;}
+AppendText                Method         System.IO.StreamWriter AppendText()
+CopyTo                    Method         System.IO.FileInfo CopyTo(string destFileName), System.IO.FileInfo CopyTo(string...
+Create                    Method         System.IO.FileStream Create()
+CreateObjRef              Method         System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
+CreateText                Method         System.IO.StreamWriter CreateText()
+Decrypt                   Method         void Decrypt()
+Delete                    Method         void Delete()
+Encrypt                   Method         void Encrypt()
+Equals                    Method         bool Equals(System.Object obj)
+GetAccessControl          Method         System.Security.AccessControl.FileSecurity GetAccessControl(), System.Security.A...
+GetHashCode               Method         int GetHashCode()
+GetLifetimeService        Method         System.Object GetLifetimeService()
+GetObjectData             Method         void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.R...
+GetType                   Method         type GetType()
+InitializeLifetimeService Method         System.Object InitializeLifetimeService()
+MoveTo                    Method         void MoveTo(string destFileName)
+Open                      Method         System.IO.FileStream Open(System.IO.FileMode mode), System.IO.FileStream Open(Sy...
+OpenRead                  Method         System.IO.FileStream OpenRead()
+OpenText                  Method         System.IO.StreamReader OpenText()
+OpenWrite                 Method         System.IO.FileStream OpenWrite()
+Refresh                   Method         void Refresh()
+Replace                   Method         System.IO.FileInfo Replace(string destinationFileName, string destinationBackupF...
+SetAccessControl          Method         void SetAccessControl(System.Security.AccessControl.FileSecurity fileSecurity)
+ToString                  Method         string ToString()
+PSChildName               NoteProperty   System.String PSChildName=aa
+PSDrive                   NoteProperty   System.Management.Automation.PSDriveInfo PSDrive=C
+PSIsContainer             NoteProperty   System.Boolean PSIsContainer=False
+PSParentPath              NoteProperty   System.String PSParentPath=Microsoft.PowerShell.Core\FileSystem::C:\
+PSPath                    NoteProperty   System.String PSPath=Microsoft.PowerShell.Core\FileSystem::C:\aa
+PSProvider                NoteProperty   System.Management.Automation.ProviderInfo PSProvider=Microsoft.PowerShell.Core\F...
+Attributes                Property       System.IO.FileAttributes Attributes {get;set;}
+CreationTime              Property       datetime CreationTime {get;set;}
+CreationTimeUtc           Property       datetime CreationTimeUtc {get;set;}
+Directory                 Property       System.IO.DirectoryInfo Directory {get;}
+DirectoryName             Property       string DirectoryName {get;}
+Exists                    Property       bool Exists {get;}
+Extension                 Property       string Extension {get;}
+FullName                  Property       string FullName {get;}
+IsReadOnly                Property       bool IsReadOnly {get;set;}
+LastAccessTime            Property       datetime LastAccessTime {get;set;}
+LastAccessTimeUtc         Property       datetime LastAccessTimeUtc {get;set;}
+LastWriteTime             Property       datetime LastWriteTime {get;set;}
+LastWriteTimeUtc          Property       datetime LastWriteTimeUtc {get;set;}
+Length                    Property       long Length {get;}
+Name                      Property       string Name {get;}
+BaseName                  ScriptProperty System.Object BaseName {get=if ($this.Extension.Length -gt 0){$this.Name.Remove(...
+VersionInfo               ScriptProperty System.Object VersionInfo {get=[System.Diagnostics.FileVersionInfo]::GetVersionI...
+
+
+
+PS C:\> $muvar.Equals(4)
+False
+
+PS C:\> $muvar
+This is my object
+
+PS C:\> $muvar | Get-Member
+
+
+   TypeName: System.String
+
+Name             MemberType            Definition
+----             ----------            ----------
+Clone            Method                System.Object Clone(), System.Object ICloneable.Clone()
+CompareTo        Method                int CompareTo(System.Object value), int CompareTo(string strB), int IComparable.Co...
+Contains         Method                bool Contains(string value)
+CopyTo           Method                void CopyTo(int sourceIndex, char[] destination, int destinationIndex, int count)
+EndsWith         Method                bool EndsWith(string value), bool EndsWith(string value, System.StringComparison c...
+Equals           Method                bool Equals(System.Object obj), bool Equals(string value), bool Equals(string valu...
+GetEnumerator    Method                System.CharEnumerator GetEnumerator(), System.Collections.IEnumerator IEnumerable....
+GetHashCode      Method                int GetHashCode()
+GetType          Method                type GetType()
+GetTypeCode      Method                System.TypeCode GetTypeCode(), System.TypeCode IConvertible.GetTypeCode()
+IndexOf          Method                int IndexOf(char value), int IndexOf(char value, int startIndex), int IndexOf(char...
+IndexOfAny       Method                int IndexOfAny(char[] anyOf), int IndexOfAny(char[] anyOf, int startIndex), int In...
+Insert           Method                string Insert(int startIndex, string value)
+IsNormalized     Method                bool IsNormalized(), bool IsNormalized(System.Text.NormalizationForm normalization...
+LastIndexOf      Method                int LastIndexOf(char value), int LastIndexOf(char value, int startIndex), int Last...
+LastIndexOfAny   Method                int LastIndexOfAny(char[] anyOf), int LastIndexOfAny(char[] anyOf, int startIndex)...
+Normalize        Method                string Normalize(), string Normalize(System.Text.NormalizationForm normalizationForm)
+PadLeft          Method                string PadLeft(int totalWidth), string PadLeft(int totalWidth, char paddingChar)
+PadRight         Method                string PadRight(int totalWidth), string PadRight(int totalWidth, char paddingChar)
+Remove           Method                string Remove(int startIndex, int count), string Remove(int startIndex)
+Replace          Method                string Replace(char oldChar, char newChar), string Replace(string oldValue, string...
+Split            Method                string[] Split(Params char[] separator), string[] Split(char[] separator, int coun...
+StartsWith       Method                bool StartsWith(string value), bool StartsWith(string value, System.StringComparis...
+Substring        Method                string Substring(int startIndex), string Substring(int startIndex, int length)
+ToBoolean        Method                bool IConvertible.ToBoolean(System.IFormatProvider provider)
+ToByte           Method                byte IConvertible.ToByte(System.IFormatProvider provider)
+ToChar           Method                char IConvertible.ToChar(System.IFormatProvider provider)
+ToCharArray      Method                char[] ToCharArray(), char[] ToCharArray(int startIndex, int length)
+ToDateTime       Method                datetime IConvertible.ToDateTime(System.IFormatProvider provider)
+ToDecimal        Method                decimal IConvertible.ToDecimal(System.IFormatProvider provider)
+ToDouble         Method                double IConvertible.ToDouble(System.IFormatProvider provider)
+ToInt16          Method                int16 IConvertible.ToInt16(System.IFormatProvider provider)
+ToInt32          Method                int IConvertible.ToInt32(System.IFormatProvider provider)
+ToInt64          Method                long IConvertible.ToInt64(System.IFormatProvider provider)
+ToLower          Method                string ToLower(), string ToLower(cultureinfo culture)
+ToLowerInvariant Method                string ToLowerInvariant()
+ToSByte          Method                sbyte IConvertible.ToSByte(System.IFormatProvider provider)
+ToSingle         Method                float IConvertible.ToSingle(System.IFormatProvider provider)
+ToString         Method                string ToString(), string ToString(System.IFormatProvider provider), string IConve...
+ToType           Method                System.Object IConvertible.ToType(type conversionType, System.IFormatProvider prov...
+ToUInt16         Method                uint16 IConvertible.ToUInt16(System.IFormatProvider provider)
+ToUInt32         Method                uint32 IConvertible.ToUInt32(System.IFormatProvider provider)
+ToUInt64         Method                uint64 IConvertible.ToUInt64(System.IFormatProvider provider)
+ToUpper          Method                string ToUpper(), string ToUpper(cultureinfo culture)
+ToUpperInvariant Method                string ToUpperInvariant()
+Trim             Method                string Trim(Params char[] trimChars), string Trim()
+TrimEnd          Method                string TrimEnd(Params char[] trimChars)
+TrimStart        Method                string TrimStart(Params char[] trimChars)
+Chars            ParameterizedProperty char Chars(int index) {get;}
+Length           Property              int Length {get;}
+
+
+
+PS C:\> $muvar.GetType()
+
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+True     True     String                                   System.Object
+
+
+
+PS C:\> $muvar.ToUpper()
+THIS IS MY OBJECT
+
+PS C:\> $muvar.ToUpper(4)
+THIS IS MY OBJECT
+
+PS C:\> $muvar.equals(4)
+False
+
+PS C:\> $muvar.Chars(4)
+
+
+PS C:\> $muvar.Substring(4)
+ is my object
+
+PS C:\> $muvar.Substring()
+Cannot find an overload for "Substring" and the argument count: "0".
+At line:1 char:1
++ $muvar.Substring()
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+
+
+PS C:\> $muvar.Substring(0)
+This is my object
+
+PS C:\> $muvar.Substring(1)
+his is my object
+
+PS C:\> $muvar.Substring(13)
+ject
+
+PS C:\> $muvar.Substring(8)
+my object
+
+PS C:\> $muvar.Substring(5)
+is my object
+
+PS C:\> $muvar.Substring(10)
+ object
+
+PS C:\> $muvar.Substring(11)
+object
+
+PS C:\> $muvar.Substring(0-4)
+Exception calling "Substring" with "1" argument(s): "StartIndex cannot be less than zero.
+Parameter name: startIndex"
+At line:1 char:1
++ $muvar.Substring(0-4)
++ ~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentOutOfRangeException
+
+
+PS C:\> $muvar.Substring(0,4)
+This
+
+PS C:\> $muvar.Chars(my)
+At line:1 char:14
++ $muvar.Chars(my)
++              ~
+Missing ')' in method call.
+
+At line:1 char:14
++ $muvar.Chars(my)
++              ~~
+Unexpected token 'my' in expression or statement.
+
+At line:1 char:16
++ $muvar.Chars(my)
++                ~
+Unexpected token ')' in expression or statement.
+
+
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInMethodCall
+
+
+PS C:\> $muvar.CompareTo((my)
+Missing ')' in method call.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInMethodCall
+
+
+PS C:\> $muvar.ToBoolean(my)
+At line:1 char:18
++ $muvar.ToBoolean(my)
++                  ~
+Missing ')' in method call.
+
+At line:1 char:18
++ $muvar.ToBoolean(my)
++                  ~~
+Unexpected token 'my' in expression or statement.
+
+At line:1 char:20
++ $muvar.ToBoolean(my)
++                    ~
+Unexpected token ')' in expression or statement.
+
+
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInMethodCall
+
+
+PS C:\> $muvar.Contains(my)
+At line:1 char:17
++ $muvar.Contains(my)
++                 ~
+Missing ')' in method call.
+
+At line:1 char:17
++ $muvar.Contains(my)
++                 ~~
+Unexpected token 'my' in expression or statement.
+
+At line:1 char:19
++ $muvar.Contains(my)
++                   ~
+Unexpected token ')' in expression or statement.
+
+
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInMethodCall
+
+
+PS C:\> $muvar.Contains(MY)
+At line:1 char:17
++ $muvar.Contains(MY)
++                 ~
+Missing ')' in method call.
+
+At line:1 char:17
++ $muvar.Contains(MY)
++                 ~~
+Unexpected token 'MY' in expression or statement.
+
+At line:1 char:19
++ $muvar.Contains(MY)
++                   ~
+Unexpected token ')' in expression or statement.
+
+
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInMethodCall
+
+
+PS C:\> $muvar
+This is my object
+
+PS C:\> $muvar.Contains(my)
+At line:1 char:17
++ $muvar.Contains(my)
++                 ~
+Missing ')' in method call.
+
+At line:1 char:17
++ $muvar.Contains(my)
++                 ~~
+Unexpected token 'my' in expression or statement.
+
+At line:1 char:19
++ $muvar.Contains(my)
++                   ~
+Unexpected token ')' in expression or statement.
+
+
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInMethodCall
+
+
+PS C:\> $muvar.Contains("my")
+True
+
+PS C:\> $Testing=get-date
+
+PS C:\> $Testing
+
+Saturday, October 20, 2018 3:35:26 PM
+
+
+
+PS C:\> $Testing | Get-Member
+
+
+   TypeName: System.DateTime
+
+Name                 MemberType     Definition
+----                 ----------     ----------
+Add                  Method         datetime Add(timespan value)
+AddDays              Method         datetime AddDays(double value)
+AddHours             Method         datetime AddHours(double value)
+AddMilliseconds      Method         datetime AddMilliseconds(double value)
+AddMinutes           Method         datetime AddMinutes(double value)
+AddMonths            Method         datetime AddMonths(int months)
+AddSeconds           Method         datetime AddSeconds(double value)
+AddTicks             Method         datetime AddTicks(long value)
+AddYears             Method         datetime AddYears(int value)
+CompareTo            Method         int CompareTo(System.Object value), int CompareTo(datetime value), int IComparable.Co...
+Equals               Method         bool Equals(System.Object value), bool Equals(datetime value), bool IEquatable[dateti...
+GetDateTimeFormats   Method         string[] GetDateTimeFormats(), string[] GetDateTimeFormats(System.IFormatProvider pro...
+GetHashCode          Method         int GetHashCode()
+GetObjectData        Method         void ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info,...
+GetType              Method         type GetType()
+GetTypeCode          Method         System.TypeCode GetTypeCode(), System.TypeCode IConvertible.GetTypeCode()
+IsDaylightSavingTime Method         bool IsDaylightSavingTime()
+Subtract             Method         timespan Subtract(datetime value), datetime Subtract(timespan value)
+ToBinary             Method         long ToBinary()
+ToBoolean            Method         bool IConvertible.ToBoolean(System.IFormatProvider provider)
+ToByte               Method         byte IConvertible.ToByte(System.IFormatProvider provider)
+ToChar               Method         char IConvertible.ToChar(System.IFormatProvider provider)
+ToDateTime           Method         datetime IConvertible.ToDateTime(System.IFormatProvider provider)
+ToDecimal            Method         decimal IConvertible.ToDecimal(System.IFormatProvider provider)
+ToDouble             Method         double IConvertible.ToDouble(System.IFormatProvider provider)
+ToFileTime           Method         long ToFileTime()
+ToFileTimeUtc        Method         long ToFileTimeUtc()
+ToInt16              Method         int16 IConvertible.ToInt16(System.IFormatProvider provider)
+ToInt32              Method         int IConvertible.ToInt32(System.IFormatProvider provider)
+ToInt64              Method         long IConvertible.ToInt64(System.IFormatProvider provider)
+ToLocalTime          Method         datetime ToLocalTime()
+ToLongDateString     Method         string ToLongDateString()
+ToLongTimeString     Method         string ToLongTimeString()
+ToOADate             Method         double ToOADate()
+ToSByte              Method         sbyte IConvertible.ToSByte(System.IFormatProvider provider)
+ToShortDateString    Method         string ToShortDateString()
+ToShortTimeString    Method         string ToShortTimeString()
+ToSingle             Method         float IConvertible.ToSingle(System.IFormatProvider provider)
+ToString             Method         string ToString(), string ToString(string format), string ToString(System.IFormatProv...
+ToType               Method         System.Object IConvertible.ToType(type conversionType, System.IFormatProvider provider)
+ToUInt16             Method         uint16 IConvertible.ToUInt16(System.IFormatProvider provider)
+ToUInt32             Method         uint32 IConvertible.ToUInt32(System.IFormatProvider provider)
+ToUInt64             Method         uint64 IConvertible.ToUInt64(System.IFormatProvider provider)
+ToUniversalTime      Method         datetime ToUniversalTime()
+DisplayHint          NoteProperty   Microsoft.PowerShell.Commands.DisplayHintType DisplayHint=DateTime
+Date                 Property       datetime Date {get;}
+Day                  Property       int Day {get;}
+DayOfWeek            Property       System.DayOfWeek DayOfWeek {get;}
+DayOfYear            Property       int DayOfYear {get;}
+Hour                 Property       int Hour {get;}
+Kind                 Property       System.DateTimeKind Kind {get;}
+Millisecond          Property       int Millisecond {get;}
+Minute               Property       int Minute {get;}
+Month                Property       int Month {get;}
+Second               Property       int Second {get;}
+Ticks                Property       long Ticks {get;}
+TimeOfDay            Property       timespan TimeOfDay {get;}
+Year                 Property       int Year {get;}
+DateTime             ScriptProperty System.Object DateTime {get=if ((& { Set-StrictMode -Version 1; $this.DisplayHint }) ...
+
+
+
+PS C:\> $Testing.AddDays(2)
+
+Monday, October 22, 2018 3:35:26 PM
+
+
+
+PS C:\> $Testing.Date
+
+Saturday, October 20, 2018 12:00:00 AM
+
+
+
+PS C:\> $Testing.Day
+20
+
+PS C:\> $Testing.TimeOfDay
+
+
+Days              : 0
+Hours             : 15
+Minutes           : 35
+Seconds           : 26
+Milliseconds      : 996
+Ticks             : 561269960448
+TotalDays         : 0.649618009777778
+TotalHours        : 15.5908322346667
+TotalMinutes      : 935.44993408
+TotalSeconds      : 56126.9960448
+TotalMilliseconds : 56126996.0448
+
+
+
+
+PS C:\> get-help get-date -Examples
+
+NAME
+    Get-Date
+
+SYNOPSIS
+    Gets the current date and time.
+
+    -------------------------- EXAMPLE 1 --------------------------
+
+    PS C:\>Get-Date -DisplayHint Date
+    Tuesday, June 13, 2006
+
+
+    This command gets a DateTime object, but it displays only the date. It uses the DisplayHint parameter to indicate that
+    only the date is to be displayed.
+    -------------------------- EXAMPLE 2 --------------------------
+
+    PS C:\>Get-Date -Format g
+    6/13/2006 12:43 PM
+
+
+    This command gets the current date and time and formats it in short-date and short-time format. It uses the .NET
+    Framework "g" format specifier (General [short date and short time]) to specify the format.
+    -------------------------- EXAMPLE 3 --------------------------
+
+    PS C:\>Get-Date -UFormat "%Y / %m / %d / %A / %Z"
+    2006 / 06 / 13 / Tuesday / -07
+
+
+    This command gets the current date and time and formats it as specified by the command. In this case, the format
+    includes the full year (%Y), the two-digit numeric month (%m), the date (%d), the full day of the week (%A), and the
+    offset from UTC ("Zulu").
+    -------------------------- EXAMPLE 4 --------------------------
+
+    PS C:\>(Get-Date -Year 2000 -Month 12 -Day 31).DayOfYear
+    366
+
+
+    This command displays the day of the year for the current date. For example, December 31 is the 365th day of 2006, but
+    it is the 366th day of 2000.
+    -------------------------- EXAMPLE 5 --------------------------
+
+    PS C:\>$a = Get-Date
+    PS C:\>$a.IsDaylightSavingTime()
+    True
+
+
+    These commands tell you whether the current date and time are adjusted for daylight savings time in the current locale.
+
+    The first command creates a variable named $a and then assigns the object retrieved by Get-Date to the $a variable.
+    Then, it uses the IsDaylightSavingTime method on the object in $a.
+
+    To see the properties and methods of the DateTime object, type:
+
+    "Get-Date | get-member".
+    -------------------------- EXAMPLE 6 --------------------------
+
+    PS C:\>$a = Get-Date
+    PS C:\>$a.ToUniversalTime()
+    Tuesday, June 13, 2006 8:09:19 PM
+
+
+    These commands convert the current date and time to UTC time.
+
+    The first command creates a variable named $a and then assigns the object retrieved by Get-Date to the $a variable.
+    Then, it uses the ToUniversalTime method on the object in $a.
+    -------------------------- EXAMPLE 7 --------------------------
+
+    PS C:\>$a = Get-WmiObject Win32_Bios -Computer Server01
+    PS C:\>$a | Format-List -Property Name, @{Label="BIOS Age";Expression={(Get-Date) -
+    $_.ConvertToDateTime($_.ReleaseDate)}}
+    Name     : Default System BIOS
+    BIOS Age : 1345.17:31:07.1091047
+
+
+    Windows Management Instrumentation (WMI) uses a different date-time object than the .NET Framework date-time object
+    that Get-Date returns. To use date-time information from WMI in a command with date-time information from Get-Date, you
+    have to use the ConvertToDateTime method to convert WMI CIM_DATETIME objects to .NET Framework DateTime objects.
+
+    The commands in this example display the name and age of the BIOS on a remote computer, Server01.
+
+    The first command uses the Get-WmiObject cmdlet to get an instance of the Win32_BIOS class on Server01 and then stores
+    it in the $a variable.
+
+    The second command uses the pipeline operator (|) to send the WMI object stored in $a to the Format-List cmdlet. The
+    Property parameter of Format-List specifies two properties to display in the list, "Name" and "BIOS Age". The "BIOS
+    Age" property is specified in a hash table. The table includes the Label key, which specifies the name of the property,
+    and the Expression key, which contains the expression that calculates the BIOS age. The expression uses the
+    ConvertToDateTime method to convert each instance of ReleaseDate to a .NET Framework DateTime object. Then, the value
+    is subtracted from the value of the Get-Date cmdlet, which, without parameters, gets the current date.
+
+    The backtick character (`) is the line continuation character in Windows PowerShell.
+    -------------------------- EXAMPLE 8 --------------------------
+
+    PS C:\>Get-Date
+    Tuesday, June 13, 2006 12:43:42 PM
+
+
+    This command gets a DateTime object and displays the current date and time in the long date and long time formats for
+    the system locale, as though you typed "Get-Date -Format F".
+    -------------------------- EXAMPLE 9 --------------------------
+
+    PS C:\>Get-Date
+    Tuesday, September 26, 2006 11:25:31 AM
+
+    PS C:\>(Get-Date).ToString()
+    9/26/2006 11:25:31 AM
+
+    PS C:\>Get-Date | Add-Content Test.txt
+
+    # Adds 9/26/2006 11:25:31 AM
+
+    PS C:\>Get-Date -Format F | Add-Content Test.txt
+
+    # Adds Tuesday, September 26, 2006 11:25:31 AM
+
+
+    These commands demonstrate how to use Get-Date with Add-Content and other cmdlets that convert the DateTime object that
+    Get-Date generates to a string.
+
+    The first command shows that the default display from a "Get-Date" command is in long-date and long-time format.
+
+    The second command shows that the default display from the ToString() method of the DateTime object is in short-date
+    and short-time format.
+
+    The third command uses a pipeline operator to send the DateTime object to the Add-Content cmdlet, which adds the
+    content to the Test.txt file. Because Add-Content uses the ToString() method of the DateTime object, the date that is
+    added is in short-date and short-time format.
+
+    The fourth command uses the Format parameter of Get-Date to specify the format. When you use the Format or UFormat
+    parameters, Get-Date generates a string, not a DateTime object. Then, when you send the string to Add-Content, it adds
+    the string to the Test.txt file without changing it.
+    -------------------------- EXAMPLE 10 --------------------------
+
+    The first command uses the Format parameter with a value of "o" to generate a timestamp string.
+    PS C:\>Get-Date -Format o
+    2012-03-08T10:55:55.6083839-08:00
+
+    The second command prepares the timestamp to be used in a directory name. The command replaces the colon characters (:)
+    in the string with dots (.) and saves the result in the $timestamp variable. Replacing the colons prevents the
+    characters that precede each colon from being interpreted as a drive name.
+    PS C:\>$timestamp = Get-Date -Format o | foreach {$_ -replace ":", "."}
+
+    The third command uses the Mkdir function to create a directory with the name in the $timestamp variable.
+    PS C:\>mkdir C:\ps-test\$timestamp
+        Directory: C:\ps-test
+
+    Mode                LastWriteTime     Length Name
+    ----                -------------     ------ ----
+    d----          3/8/2012  11:01 AM            2012-03-08T11.00.24.4192623-08.00
+
+
+    This example shows how to use the Get-Date cmdlet to create a timestamp and how to use the timestamp in or as part of a
+    directory name.
+
+
+
+
+PS C:\> Get-Date -UFormat "%Y / %m / %d"
+2018 / 10 / 20
+
+PS C:\> $Testing.ToUniversalTime()
+
+Saturday, October 20, 2018 10:05:26 AM
+
+
+
+PS C:\> $Testing.ToUniversalTime("%Y / %m / %d")
+Cannot find an overload for "ToUniversalTime" and the argument count: "1".
+At line:1 char:1
++ $Testing.ToUniversalTime("%Y / %m / %d")
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+
+
+PS C:\> $Testing.ToUniversalTime(YY-mm-dd)
+At line:1 char:26
++ $Testing.ToUniversalTime(YY-mm-dd)
++                          ~
+Missing ')' in method call.
+
+At line:1 char:26
++ $Testing.ToUniversalTime(YY-mm-dd)
++                          ~~~~~~~~
+Unexpected token 'YY-mm-dd' in expression or statement.
+
+At line:1 char:34
++ $Testing.ToUniversalTime(YY-mm-dd)
++                                  ~
+Unexpected token ')' in expression or statement.
+
+
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInMethodCall
+
+
+PS C:\> $Testing.ToUniversalTime(yy-mm-dd)
+At line:1 char:26
++ $Testing.ToUniversalTime(yy-mm-dd)
++                          ~
+Missing ')' in method call.
+
+At line:1 char:26
++ $Testing.ToUniversalTime(yy-mm-dd)
++                          ~~~~~~~~
+Unexpected token 'yy-mm-dd' in expression or statement.
+
+At line:1 char:34
++ $Testing.ToUniversalTime(yy-mm-dd)
++                                  ~
+Unexpected token ')' in expression or statement.
+
+
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInMethodCall
+
+
+PS C:\> Get-Date -UFormat "%Y - %m - %d"
+2018 - 10 - 20
+
+PS C:\> Get-Service | Get-Member
+
+
+   TypeName: System.ServiceProcess.ServiceController
+
+Name                      MemberType    Definition
+----                      ----------    ----------
+Name                      AliasProperty Name = ServiceName
+RequiredServices          AliasProperty RequiredServices = ServicesDependedOn
+Disposed                  Event         System.EventHandler Disposed(System.Object, System.EventArgs)
+Close                     Method        void Close()
+Continue                  Method        void Continue()
+CreateObjRef              Method        System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
+Dispose                   Method        void Dispose(), void IDisposable.Dispose()
+Equals                    Method        bool Equals(System.Object obj)
+ExecuteCommand            Method        void ExecuteCommand(int command)
+GetHashCode               Method        int GetHashCode()
+GetLifetimeService        Method        System.Object GetLifetimeService()
+GetType                   Method        type GetType()
+InitializeLifetimeService Method        System.Object InitializeLifetimeService()
+Pause                     Method        void Pause()
+Refresh                   Method        void Refresh()
+Start                     Method        void Start(), void Start(string[] args)
+Stop                      Method        void Stop()
+WaitForStatus             Method        void WaitForStatus(System.ServiceProcess.ServiceControllerStatus desiredStatus), ...
+CanPauseAndContinue       Property      bool CanPauseAndContinue {get;}
+CanShutdown               Property      bool CanShutdown {get;}
+CanStop                   Property      bool CanStop {get;}
+Container                 Property      System.ComponentModel.IContainer Container {get;}
+DependentServices         Property      System.ServiceProcess.ServiceController[] DependentServices {get;}
+DisplayName               Property      string DisplayName {get;set;}
+MachineName               Property      string MachineName {get;set;}
+ServiceHandle             Property      System.Runtime.InteropServices.SafeHandle ServiceHandle {get;}
+ServiceName               Property      string ServiceName {get;set;}
+ServicesDependedOn        Property      System.ServiceProcess.ServiceController[] ServicesDependedOn {get;}
+ServiceType               Property      System.ServiceProcess.ServiceType ServiceType {get;}
+Site                      Property      System.ComponentModel.ISite Site {get;set;}
+StartType                 Property      System.ServiceProcess.ServiceStartMode StartType {get;}
+Status                    Property      System.ServiceProcess.ServiceControllerStatus Status {get;}
+ToString                  ScriptMethod  System.Object ToString();
+
+
+
+PS C:\> $Services=get-service -name ServiceName,Status
+get-service : Cannot find any service with service name 'ServiceName'.
+At line:1 char:11
++ $Services=get-service -name ServiceName,Status
++           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (ServiceName:String) [Get-Service], ServiceCommandException
+    + FullyQualifiedErrorId : NoServiceFoundForGivenName,Microsoft.PowerShell.Commands.GetServiceCommand
+
+get-service : Cannot find any service with service name 'Status'.
+At line:1 char:11
++ $Services=get-service -name ServiceName,Status
++           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Status:String) [Get-Service], ServiceCommandException
+    + FullyQualifiedErrorId : NoServiceFoundForGivenName,Microsoft.PowerShell.Commands.GetServiceCommand
+
+
+PS C:\> $Services=get-service -name "ServiceName,Status"
+get-service : Cannot find any service with service name 'ServiceName,Status'.
+At line:1 char:11
++ $Services=get-service -name "ServiceName,Status"
++           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (ServiceName,Status:String) [Get-Service], ServiceCommandException
+    + FullyQualifiedErrorId : NoServiceFoundForGivenName,Microsoft.PowerShell.Commands.GetServiceCommand
+
+
+PS C:\> Get-Service -name Status
+Get-Service : Cannot find any service with service name 'Status'.
+At line:1 char:1
++ Get-Service -name Status
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Status:String) [Get-Service], ServiceCommandException
+    + FullyQualifiedErrorId : NoServiceFoundForGivenName,Microsoft.PowerShell.Commands.GetServiceCommand
+
+
+PS C:\> Get-Service -DisplayName *
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  AdobeARMservice    Adobe Acrobat Update Service
+Stopped  AeLookupSvc        Application Experience
+Stopped  ALG                Application Layer Gateway Service
+Running  AnyDesk            AnyDesk Service
+Running  AppHostSvc         Application Host Helper Service
+Stopped  AppIDSvc           Application Identity
+Stopped  Appinfo            Application Information
+Stopped  AppMgmt            Application Management
+Stopped  AppReadiness       App Readiness
+Stopped  AppXSvc            AppX Deployment Service (AppXSVC)
+Stopped  aspnet_state       ASP.NET State Service
+Running  AudioEndpointBu... Windows Audio Endpoint Builder
+Running  Audiosrv           Windows Audio
+Stopped  AxInstSV           ActiveX Installer (AxInstSV)
+Running  AzureADConnectA... Microsoft Azure AD Connect Agent Up...
+Running  AzureADConnectA... Microsoft Azure AD Connect Authenti...
+Stopped  BDESVC             BitLocker Drive Encryption Service
+Running  BFE                Base Filtering Engine
+Running  BITS               Background Intelligent Transfer Ser...
+Running  BrokerInfrastru... Background Tasks Infrastructure Ser...
+Running  Browser            Computer Browser
+Stopped  BthHFSrv           Bluetooth Handsfree Service
+Stopped  bthserv            Bluetooth Support Service
+Stopped  CertPropSvc        Certificate Propagation
+Stopped  COMSysApp          COM+ System Application
+Stopped  cphs               Intel(R) Content Protection HECI Se...
+Running  CryptSvc           Cryptographic Services
+Stopped  CscService         Offline Files
+Running  DcomLaunch         DCOM Server Process Launcher
+Stopped  defragsvc          Optimise drives
+Running  DeviceAssociati... Device Association Service
+Stopped  DeviceInstall      Device Install Service
+Running  Dhcp               DHCP Client
+Running  DiagTrack          Diagnostics Tracking Service
+Running  Dnscache           DNS Client
+Stopped  dot3svc            Wired AutoConfig
+Running  DPS                Diagnostic Policy Service
+Stopped  DsmSvc             Device Setup Manager
+Stopped  Eaphost            Extensible Authentication Protocol
+Stopped  EFS                Encrypting File System (EFS)
+Running  EventLog           Windows Event Log
+Running  EventSystem        COM+ Event System
+Stopped  Fax                Fax
+Stopped  fdPHost            Function Discovery Provider Host
+Stopped  FDResPub           Function Discovery Resource Publica...
+Stopped  fhsvc              File History Service
+Running  FontCache          Windows Font Cache Service
+Running  FontCache3.0.0.0   Windows Presentation Foundation Fon...
+Stopped  gpsvc              Group Policy Client
+Stopped  gupdate            Google Update Service (gupdate)
+Stopped  gupdatem           Google Update Service (gupdatem)
+Running  hidserv            Human Interface Device Service
+Stopped  hkmsvc             Health Key and Certificate Management
+Stopped  HomeGroupListener  HomeGroup Listener
+Stopped  HomeGroupProvider  HomeGroup Provider
+Stopped  IDriverT           InstallDriver Table Manager
+Stopped  IEEtwCollectorS... Internet Explorer ETW Collector Ser...
+Running  igfxCUIService1... Intel(R) HD Graphics Control Panel ...
+Running  IKEEXT             IKE and AuthIP IPsec Keying Modules
+Running  iphlpsvc           IP Helper
+Running  KeyIso             CNG Key Isolation
+Stopped  KtmRm              KtmRm for Distributed Transaction C...
+Running  LanmanServer       Server
+Running  LanmanWorkstation  Workstation
+Stopped  lfsvc              Windows Location Framework Service
+Stopped  lltdsvc            Link-Layer Topology Discovery Mapper
+Running  lmhosts            TCP/IP NetBIOS Helper
+Running  LSM                Local Session Manager
+Stopped  MMCSS              Multimedia Class Scheduler
+Running  MpsSvc             Windows Firewall
+Stopped  MSDTC              Distributed Transaction Coordinator
+Running  MSiSCSI            Microsoft iSCSI Initiator Service
+Stopped  msiserver          Windows Installer
+Stopped  MsKeyboardFilter   Microsoft Keyboard Filter
+Running  msoidsvc           Microsoft Online Services Sign-in A...
+Stopped  napagent           Network Access Protection Agent
+Stopped  NcaSvc             Network Connectivity Assistant
+Running  NcbService         Network Connection Broker
+Stopped  NcdAutoSetup       Network Connected Devices Auto-Setup
+Stopped  Netlogon           Netlogon
+Running  Netman             Network Connections
+Running  netprofm           Network List Service
+Stopped  NetTcpPortSharing  NetTcpPortSharing
+Running  NlaSvc             Network Location Awareness
+Running  nsi                Network Store Interface Service
+Stopped  odserv             Microsoft Office Diagnostics Service
+Stopped  OracleJobSchedu... OracleJobSchedulerXE
+Stopped  OracleMTSRecove... OracleMTSRecoveryService
+Running  OracleServiceXE    OracleServiceXE
+Stopped  OracleXEClrAgent   OracleXEClrAgent
+Stopped  OracleXETNSList... OracleXETNSListener
+Stopped  ose                Office  Source Engine
+Stopped  p2pimsvc           Peer Networking Identity Manager
+Stopped  p2psvc             Peer Networking Grouping
+Running  PcaSvc             Program Compatibility Assistant Ser...
+Stopped  PeerDistSvc        BranchCache
+Stopped  PerfHost           Performance Counter DLL Host
+Stopped  pla                Performance Logs & Alerts
+Running  PlugPlay           Plug and Play
+Stopped  PNRPAutoReg        PNRP Machine Name Publication Service
+Stopped  PNRPsvc            Peer Name Resolution Protocol
+Running  PolicyAgent        IPsec Policy Agent
+Running  Power              Power
+Stopped  PrintNotify        Printer Extensions and Notifications
+Running  ProfSvc            User Profile Service
+Stopped  QWAVE              Quality Windows Audio Video Experience
+Stopped  RasAuto            Remote Access Auto Connection Manager
+
+PS C:\> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+
+PS C:\> Get-Service -Name *
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  AdobeARMservice    Adobe Acrobat Update Service
+Stopped  AeLookupSvc        Application Experience
+Stopped  ALG                Application Layer Gateway Service
+Running  AnyDesk            AnyDesk Service
+Running  AppHostSvc         Application Host Helper Service
+Stopped  AppIDSvc           Application Identity
+Stopped  Appinfo            Application Information
+Stopped  AppMgmt            Application Management
+Stopped  AppReadiness       App Readiness
+Stopped  AppXSvc            AppX Deployment Service (AppXSVC)
+Stopped  aspnet_state       ASP.NET State Service
+Running  AudioEndpointBu... Windows Audio Endpoint Builder
+Running  Audiosrv           Windows Audio
+Stopped  AxInstSV           ActiveX Installer (AxInstSV)
+Running  AzureADConnectA... Microsoft Azure AD Connect Agent Up...
+Running  AzureADConnectA... Microsoft Azure AD Connect Authenti...
+Stopped  BDESVC             BitLocker Drive Encryption Service
+Running  BFE                Base Filtering Engine
+Running  BITS               Background Intelligent Transfer Ser...
+Running  BrokerInfrastru... Background Tasks Infrastructure Ser...
+Running  Browser            Computer Browser
+Stopped  BthHFSrv           Bluetooth Handsfree Service
+Stopped  bthserv            Bluetooth Support Service
+Stopped  CertPropSvc        Certificate Propagation
+Stopped  COMSysApp          COM+ System Application
+Stopped  cphs               Intel(R) Content Protection HECI Se...
+Running  CryptSvc           Cryptographic Services
+Stopped  CscService         Offline Files
+Running  DcomLaunch         DCOM Server Process Launcher
+Stopped  defragsvc          Optimise drives
+Running  DeviceAssociati... Device Association Service
+Stopped  DeviceInstall      Device Install Service
+Running  Dhcp               DHCP Client
+Running  DiagTrack          Diagnostics Tracking Service
+Running  Dnscache           DNS Client
+Stopped  dot3svc            Wired AutoConfig
+Running  DPS                Diagnostic Policy Service
+Stopped  DsmSvc             Device Setup Manager
+Stopped  Eaphost            Extensible Authentication Protocol
+Stopped  EFS                Encrypting File System (EFS)
+Running  EventLog           Windows Event Log
+Running  EventSystem        COM+ Event System
+Stopped  Fax                Fax
+Stopped  fdPHost            Function Discovery Provider Host
+Stopped  FDResPub           Function Discovery Resource Publica...
+Stopped  fhsvc              File History Service
+Running  FontCache          Windows Font Cache Service
+Running  FontCache3.0.0.0   Windows Presentation Foundation Fon...
+Stopped  gpsvc              Group Policy Client
+Stopped  gupdate            Google Update Service (gupdate)
+Stopped  gupdatem           Google Update Service (gupdatem)
+Running  hidserv            Human Interface Device Service
+Stopped  hkmsvc             Health Key and Certificate Management
+Stopped  HomeGroupListener  HomeGroup Listener
+Stopped  HomeGroupProvider  HomeGroup Provider
+Stopped  IDriverT           InstallDriver Table Manager
+Stopped  IEEtwCollectorS... Internet Explorer ETW Collector Ser...
+Running  igfxCUIService1... Intel(R) HD Graphics Control Panel ...
+Running  IKEEXT             IKE and AuthIP IPsec Keying Modules
+Running  iphlpsvc           IP Helper
+Running  KeyIso             CNG Key Isolation
+Stopped  KtmRm              KtmRm for Distributed Transaction C...
+Running  LanmanServer       Server
+Running  LanmanWorkstation  Workstation
+Stopped  lfsvc              Windows Location Framework Service
+Stopped  lltdsvc            Link-Layer Topology Discovery Mapper
+Running  lmhosts            TCP/IP NetBIOS Helper
+Running  LSM                Local Session Manager
+Stopped  MMCSS              Multimedia Class Scheduler
+Running  MpsSvc             Windows Firewall
+Stopped  MSDTC              Distributed Transaction Coordinator
+Running  MSiSCSI            Microsoft iSCSI Initiator Service
+Stopped  msiserver          Windows Installer
+Stopped  MsKeyboardFilter   Microsoft Keyboard Filter
+Running  msoidsvc           Microsoft Online Services Sign-in A...
+Stopped  napagent           Network Access Protection Agent
+Stopped  NcaSvc             Network Connectivity Assistant
+Running  NcbService         Network Connection Broker
+Stopped  NcdAutoSetup       Network Connected Devices Auto-Setup
+Stopped  Netlogon           Netlogon
+Running  Netman             Network Connections
+Running  netprofm           Network List Service
+Stopped  NetTcpPortSharing  NetTcpPortSharing
+Running  NlaSvc             Network Location Awareness
+Running  nsi                Network Store Interface Service
+
+PS C:\> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+
+PS C:\> Get-Service | Select-Object name,displayname
+
+Name                                                           DisplayName
+----                                                           -----------
+AdobeARMservice                                                Adobe Acrobat Update Service
+AeLookupSvc                                                    Application Experience
+ALG                                                            Application Layer Gateway Service
+AnyDesk                                                        AnyDesk Service
+AppHostSvc                                                     Application Host Helper Service
+AppIDSvc                                                       Application Identity
+Appinfo                                                        Application Information
+AppMgmt                                                        Application Management
+AppReadiness                                                   App Readiness
+AppXSvc                                                        AppX Deployment Service (AppXSVC)
+aspnet_state                                                   ASP.NET State Service
+AudioEndpointBuilder                                           Windows Audio Endpoint Builder
+Audiosrv                                                       Windows Audio
+AxInstSV                                                       ActiveX Installer (AxInstSV)
+AzureADConnectAgentUpdater                                     Microsoft Azure AD Connect Agent Updater
+AzureADConnectAuthenticationAgent                              Microsoft Azure AD Connect Authentication Agent
+BDESVC                                                         BitLocker Drive Encryption Service
+BFE                                                            Base Filtering Engine
+BITS                                                           Background Intelligent Transfer Service
+BrokerInfrastructure                                           Background Tasks Infrastructure Service
+Browser                                                        Computer Browser
+BthHFSrv                                                       Bluetooth Handsfree Service
+bthserv                                                        Bluetooth Support Service
+CertPropSvc                                                    Certificate Propagation
+COMSysApp                                                      COM+ System Application
+cphs                                                           Intel(R) Content Protection HECI Service
+CryptSvc                                                       Cryptographic Services
+CscService                                                     Offline Files
+DcomLaunch                                                     DCOM Server Process Launcher
+defragsvc                                                      Optimise drives
+DeviceAssociationService                                       Device Association Service
+DeviceInstall                                                  Device Install Service
+Dhcp                                                           DHCP Client
+DiagTrack                                                      Diagnostics Tracking Service
+Dnscache                                                       DNS Client
+dot3svc                                                        Wired AutoConfig
+DPS                                                            Diagnostic Policy Service
+DsmSvc                                                         Device Setup Manager
+Eaphost                                                        Extensible Authentication Protocol
+EFS                                                            Encrypting File System (EFS)
+EventLog                                                       Windows Event Log
+EventSystem                                                    COM+ Event System
+Fax                                                            Fax
+fdPHost                                                        Function Discovery Provider Host
+FDResPub                                                       Function Discovery Resource Publication
+fhsvc                                                          File History Service
+FontCache                                                      Windows Font Cache Service
+FontCache3.0.0.0                                               Windows Presentation Foundation Font Cache 3.0.0.0
+gpsvc                                                          Group Policy Client
+gupdate                                                        Google Update Service (gupdate)
+gupdatem                                                       Google Update Service (gupdatem)
+hidserv                                                        Human Interface Device Service
+hkmsvc                                                         Health Key and Certificate Management
+HomeGroupListener                                              HomeGroup Listener
+HomeGroupProvider                                              HomeGroup Provider
+IDriverT                                                       InstallDriver Table Manager
+IEEtwCollectorService                                          Internet Explorer ETW Collector Service
+igfxCUIService1.0.0.0                                          Intel(R) HD Graphics Control Panel Service
+IKEEXT                                                         IKE and AuthIP IPsec Keying Modules
+iphlpsvc                                                       IP Helper
+KeyIso                                                         CNG Key Isolation
+KtmRm                                                          KtmRm for Distributed Transaction Coordinator
+LanmanServer                                                   Server
+LanmanWorkstation                                              Workstation
+lfsvc                                                          Windows Location Framework Service
+lltdsvc                                                        Link-Layer Topology Discovery Mapper
+lmhosts                                                        TCP/IP NetBIOS Helper
+LSM                                                            Local Session Manager
+MMCSS                                                          Multimedia Class Scheduler
+MpsSvc                                                         Windows Firewall
+MSDTC                                                          Distributed Transaction Coordinator
+MSiSCSI                                                        Microsoft iSCSI Initiator Service
+msiserver                                                      Windows Installer
+MsKeyboardFilter                                               Microsoft Keyboard Filter
+msoidsvc                                                       Microsoft Online Services Sign-in Assistant
+napagent                                                       Network Access Protection Agent
+NcaSvc                                                         Network Connectivity Assistant
+NcbService                                                     Network Connection Broker
+NcdAutoSetup                                                   Network Connected Devices Auto-Setup
+Netlogon                                                       Netlogon
+Netman                                                         Network Connections
+netprofm                                                       Network List Service
+NetTcpPortSharing                                              NetTcpPortSharing
+NlaSvc                                                         Network Location Awareness
+nsi                                                            Network Store Interface Service
+odserv                                                         Microsoft Office Diagnostics Service
+OracleJobSchedulerXE                                           OracleJobSchedulerXE
+OracleMTSRecoveryService                                       OracleMTSRecoveryService
+OracleServiceXE                                                OracleServiceXE
+OracleXEClrAgent                                               OracleXEClrAgent
+OracleXETNSListener                                            OracleXETNSListener
+ose                                                            Office  Source Engine
+p2pimsvc                                                       Peer Networking Identity Manager
+p2psvc                                                         Peer Networking Grouping
+PcaSvc                                                         Program Compatibility Assistant Service
+PeerDistSvc                                                    BranchCache
+PerfHost                                                       Performance Counter DLL Host
+pla                                                            Performance Logs & Alerts
+PlugPlay                                                       Plug and Play
+PNRPAutoReg                                                    PNRP Machine Name Publication Service
+PNRPsvc                                                        Peer Name Resolution Protocol
+PolicyAgent                                                    IPsec Policy Agent
+Power                                                          Power
+PrintNotify                                                    Printer Extensions and Notifications
+ProfSvc                                                        User Profile Service
+QWAVE                                                          Quality Windows Audio Video Experience
+RasAuto                                                        Remote Access Auto Connection Manager
+RasMan                                                         Remote Access Connection Manager
+RemoteAccess                                                   Routing and Remote Access
+RemoteRegistry                                                 Remote Registry
+RemoteServerWin                                                RemoteServerWin
+RpcEptMapper                                                   RPC Endpoint Mapper
+RpcLocator                                                     Remote Procedure Call (RPC) Locator
+RpcSs                                                          Remote Procedure Call (RPC)
+SamSs                                                          Security Accounts Manager
+SCardSvr                                                       Smart Card
+ScDeviceEnum                                                   Smart Card Device Enumeration Service
+
+PS C:\> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+
+PS C:\> $Services=Get-Service | Select-Object name,displayname
+
+PS C:\> $Services
+
+Name                                                           DisplayName
+----                                                           -----------
+AdobeARMservice                                                Adobe Acrobat Update Service
+AeLookupSvc                                                    Application Experience
+ALG                                                            Application Layer Gateway Service
+AnyDesk                                                        AnyDesk Service
+AppHostSvc                                                     Application Host Helper Service
+AppIDSvc                                                       Application Identity
+Appinfo                                                        Application Information
+AppMgmt                                                        Application Management
+AppReadiness                                                   App Readiness
+AppXSvc                                                        AppX Deployment Service (AppXSVC)
+aspnet_state                                                   ASP.NET State Service
+AudioEndpointBuilder                                           Windows Audio Endpoint Builder
+Audiosrv                                                       Windows Audio
+AxInstSV                                                       ActiveX Installer (AxInstSV)
+AzureADConnectAgentUpdater                                     Microsoft Azure AD Connect Agent Updater
+AzureADConnectAuthenticationAgent                              Microsoft Azure AD Connect Authentication Agent
+BDESVC                                                         BitLocker Drive Encryption Service
+BFE                                                            Base Filtering Engine
+BITS                                                           Background Intelligent Transfer Service
+BrokerInfrastructure                                           Background Tasks Infrastructure Service
+Browser                                                        Computer Browser
+BthHFSrv                                                       Bluetooth Handsfree Service
+bthserv                                                        Bluetooth Support Service
+CertPropSvc                                                    Certificate Propagation
+COMSysApp                                                      COM+ System Application
+cphs                                                           Intel(R) Content Protection HECI Service
+CryptSvc                                                       Cryptographic Services
+CscService                                                     Offline Files
+DcomLaunch                                                     DCOM Server Process Launcher
+defragsvc                                                      Optimise drives
+DeviceAssociationService                                       Device Association Service
+DeviceInstall                                                  Device Install Service
+Dhcp                                                           DHCP Client
+DiagTrack                                                      Diagnostics Tracking Service
+Dnscache                                                       DNS Client
+dot3svc                                                        Wired AutoConfig
+DPS                                                            Diagnostic Policy Service
+DsmSvc                                                         Device Setup Manager
+Eaphost                                                        Extensible Authentication Protocol
+EFS                                                            Encrypting File System (EFS)
+EventLog                                                       Windows Event Log
+EventSystem                                                    COM+ Event System
+Fax                                                            Fax
+fdPHost                                                        Function Discovery Provider Host
+FDResPub                                                       Function Discovery Resource Publication
+fhsvc                                                          File History Service
+FontCache                                                      Windows Font Cache Service
+FontCache3.0.0.0                                               Windows Presentation Foundation Font Cache 3.0.0.0
+gpsvc                                                          Group Policy Client
+gupdate                                                        Google Update Service (gupdate)
+gupdatem                                                       Google Update Service (gupdatem)
+hidserv                                                        Human Interface Device Service
+hkmsvc                                                         Health Key and Certificate Management
+HomeGroupListener                                              HomeGroup Listener
+HomeGroupProvider                                              HomeGroup Provider
+IDriverT                                                       InstallDriver Table Manager
+IEEtwCollectorService                                          Internet Explorer ETW Collector Service
+igfxCUIService1.0.0.0                                          Intel(R) HD Graphics Control Panel Service
+IKEEXT                                                         IKE and AuthIP IPsec Keying Modules
+iphlpsvc                                                       IP Helper
+KeyIso                                                         CNG Key Isolation
+KtmRm                                                          KtmRm for Distributed Transaction Coordinator
+LanmanServer                                                   Server
+LanmanWorkstation                                              Workstation
+lfsvc                                                          Windows Location Framework Service
+lltdsvc                                                        Link-Layer Topology Discovery Mapper
+lmhosts                                                        TCP/IP NetBIOS Helper
+LSM                                                            Local Session Manager
+MMCSS                                                          Multimedia Class Scheduler
+MpsSvc                                                         Windows Firewall
+MSDTC                                                          Distributed Transaction Coordinator
+MSiSCSI                                                        Microsoft iSCSI Initiator Service
+msiserver                                                      Windows Installer
+MsKeyboardFilter                                               Microsoft Keyboard Filter
+msoidsvc                                                       Microsoft Online Services Sign-in Assistant
+napagent                                                       Network Access Protection Agent
+NcaSvc                                                         Network Connectivity Assistant
+NcbService                                                     Network Connection Broker
+NcdAutoSetup                                                   Network Connected Devices Auto-Setup
+Netlogon                                                       Netlogon
+Netman                                                         Network Connections
+netprofm                                                       Network List Service
+
+PS C:\> TerminatingError(): "The pipeline has been stopped."
+
+PS C:\> get-date 
+
+Saturday, October 20, 2018 4:00:38 PM
+
+
+
+PS C:\> Get-Date -UFormat "%Y - %m - %d"
+2018 - 10 - 20
+
+PS C:\> $filename=get-date
+
+PS C:\> $filename
+
+Saturday, October 20, 2018 4:01:11 PM
+
+
+
+PS C:\> $filename=get-date -UFormat "%Y - %m - %d"
+
+PS C:\> $filename
+2018 - 10 - 20
+
+PS C:\> $filename=get-date -UFormat "%Y - %m - %d -%M"
+
+PS C:\> $filename
+2018 - 10 - 20 -02
+
+PS C:\> $Services | Out-File -FilePath C:\bharat\$filename.txt
+
+PS C:\> $Services | Out-File -FilePath C:\bharat\Service-$filename.txt
+
+PS C:\> $filename=get-date -UFormat "%Y-%m-%d-%M"
+
+PS C:\> $Services | Out-File -FilePath C:\bharat\Service-$filename.txt
+
+PS C:\> $Services
+
+Name                                                           DisplayName
+----                                                           -----------
+AdobeARMservice                                                Adobe Acrobat Update Service
+AeLookupSvc                                                    Application Experience
+ALG                                                            Application Layer Gateway Service
+AnyDesk                                                        AnyDesk Service
+AppHostSvc                                                     Application Host Helper Service
+AppIDSvc                                                       Application Identity
+Appinfo                                                        Application Information
+AppMgmt                                                        Application Management
+AppReadiness                                                   App Readiness
+AppXSvc                                                        AppX Deployment Service (AppXSVC)
+aspnet_state                                                   ASP.NET State Service
+AudioEndpointBuilder                                           Windows Audio Endpoint Builder
+Audiosrv                                                       Windows Audio
+AxInstSV                                                       ActiveX Installer (AxInstSV)
+AzureADConnectAgentUpdater                                     Microsoft Azure AD Connect Agent Updater
+AzureADConnectAuthenticationAgent                              Microsoft Azure AD Connect Authentication Agent
+BDESVC                                                         BitLocker Drive Encryption Service
+BFE                                                            Base Filtering Engine
+BITS                                                           Background Intelligent Transfer Service
+BrokerInfrastructure                                           Background Tasks Infrastructure Service
+Browser                                                        Computer Browser
+BthHFSrv                                                       Bluetooth Handsfree Service
+bthserv                                                        Bluetooth Support Service
+CertPropSvc                                                    Certificate Propagation
+COMSysApp                                                      COM+ System Application
+cphs                                                           Intel(R) Content Protection HECI Service
+CryptSvc                                                       Cryptographic Services
+CscService                                                     Offline Files
+DcomLaunch                                                     DCOM Server Process Launcher
+defragsvc                                                      Optimise drives
+DeviceAssociationService                                       Device Association Service
+DeviceInstall                                                  Device Install Service
+Dhcp                                                           DHCP Client
+DiagTrack                                                      Diagnostics Tracking Service
+Dnscache                                                       DNS Client
+dot3svc                                                        Wired AutoConfig
+DPS                                                            Diagnostic Policy Service
+DsmSvc                                                         Device Setup Manager
+Eaphost                                                        Extensible Authentication Protocol
+EFS                                                            Encrypting File System (EFS)
+EventLog                                                       Windows Event Log
+EventSystem                                                    COM+ Event System
+Fax                                                            Fax
+fdPHost                                                        Function Discovery Provider Host
+FDResPub                                                       Function Discovery Resource Publication
+fhsvc                                                          File History Service
+FontCache                                                      Windows Font Cache Service
+FontCache3.0.0.0                                               Windows Presentation Foundation Font Cache 3.0.0.0
+gpsvc                                                          Group Policy Client
+gupdate                                                        Google Update Service (gupdate)
+gupdatem                                                       Google Update Service (gupdatem)
+hidserv                                                        Human Interface Device Service
+hkmsvc                                                         Health Key and Certificate Management
+HomeGroupListener                                              HomeGroup Listener
+HomeGroupProvider                                              HomeGroup Provider
+IDriverT                                                       InstallDriver Table Manager
+IEEtwCollectorService                                          Internet Explorer ETW Collector Service
+igfxCUIService1.0.0.0                                          Intel(R) HD Graphics Control Panel Service
+IKEEXT                                                         IKE and AuthIP IPsec Keying Modules
+iphlpsvc                                                       IP Helper
+KeyIso                                                         CNG Key Isolation
+KtmRm                                                          KtmRm for Distributed Transaction Coordinator
+LanmanServer                                                   Server
+LanmanWorkstation                                              Workstation
+lfsvc                                                          Windows Location Framework Service
+lltdsvc                                                        Link-Layer Topology Discovery Mapper
+lmhosts                                                        TCP/IP NetBIOS Helper
+LSM                                                            Local Session Manager
+MMCSS                                                          Multimedia Class Scheduler
+MpsSvc                                                         Windows Firewall
+MSDTC                                                          Distributed Transaction Coordinator
+MSiSCSI                                                        Microsoft iSCSI Initiator Service
+msiserver                                                      Windows Installer
+MsKeyboardFilter                                               Microsoft Keyboard Filter
+msoidsvc                                                       Microsoft Online Services Sign-in Assistant
+napagent                                                       Network Access Protection Agent
+NcaSvc                                                         Network Connectivity Assistant
+NcbService                                                     Network Connection Broker
+NcdAutoSetup                                                   Network Connected Devices Auto-Setup
+Netlogon                                                       Netlogon
+Netman                                                         Network Connections
+netprofm                                                       Network List Service
+NetTcpPortSharing                                              NetTcpPortSharing
+NlaSvc                                                         Network Location Awareness
+nsi                                                            Network Store Interface Service
+odserv                                                         Microsoft Office Diagnostics Service
+OracleJobSchedulerXE                                           OracleJobSchedulerXE
+OracleMTSRecoveryService                                       OracleMTSRecoveryService
+OracleServiceXE                                                OracleServiceXE
+OracleXEClrAgent                                               OracleXEClrAgent
+OracleXETNSListener                                            OracleXETNSListener
+ose                                                            Office  Source Engine
+p2pimsvc                                                       Peer Networking Identity Manager
+p2psvc                                                         Peer Networking Grouping
+PcaSvc                                                         Program Compatibility Assistant Service
+PeerDistSvc                                                    BranchCache
+PerfHost                                                       Performance Counter DLL Host
+pla                                                            Performance Logs & Alerts
+
+PS C:\> TerminatingError(): "The pipeline has been stopped."
+
+PS C:\> $Services=Get-Service | Select-Object name,Status
+
+PS C:\> $Services | Out-File -FilePath C:\bharat\Service-$filename.txt
